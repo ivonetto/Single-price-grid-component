@@ -1,0 +1,145 @@
+:root{
+    /* Colors */
+    --c-cyan: hsl(179, 62%, 43%);
+    --c-bright-yellow: hsl(71, 73%, 54%);
+    --c-light-gray: hsl(204, 43%, 93%);
+    --c-grayish-blue: hsl(218, 22%, 67%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Karla', sans-serif;
+}
+
+body {
+    align-items: center;
+    background: #e6eff5;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "first first"
+    "second third";
+    max-width: 640px;
+}
+
+.primeira-secao{
+    background: #ffffff;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    grid-area: first;
+    padding: 40px;
+}
+
+.titulo1{
+    color: hsl(179, 62%, 43%);
+    margin-bottom: 30px;
+    font-size: large;
+}
+
+.subtitle {
+    color: hsl(71, 73%, 54%);
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: medium;
+}
+
+.content {
+    color: #c6cace;
+}
+
+.segunda-secao{
+    background: hsl(179, 62%, 43%);
+    color: hsl(204, 43%, 93%);
+    grid-area: second;
+    padding: 45px 40px 30px 40px;
+    border-bottom-left-radius: 6px;
+}
+
+.titulo2{
+    color: hsl(204, 43%, 93%);
+    font-size: 19px;
+    margin-bottom: 21px;
+}
+
+.amount {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.amount span{
+    color: #aef8f7;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.content1{
+    margin-bottom: 30px;
+}
+
+.btn-signup{
+    background: hsl(71, 73%, 54%);
+    border: 1px solid hsl(71, 73%, 54%);
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    outline: none;
+    padding: 15px;
+    width: 100%;
+}
+
+.btn-signup:hover{
+    background: hsl(71, 94%, 20%);
+    border: 1px solid hsl(71, 73%, 54%);
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    outline: none;
+    padding: 15px;
+    width: 100%;
+}
+
+.terceira-secao{
+    background: #49bdbd;
+    grid-area: third;
+    padding: 45px 40px 30px 40px;
+    border-bottom-right-radius: 6px;
+    color: hsl(204, 43%, 93%);
+}
+
+
+/*Responsividade*/
+@media screen and (max-width: 600px) {
+
+    body {
+        padding: 0 30px;
+    }
+
+    .container {
+        grid-template-areas:
+                'first'
+                'second'
+                 'third';
+        grid-template-columns: 1fr;
+    }
+
+    .segunda-secao {
+        border-bottom-left-radius: 0;
+
+    }
+
+    .terceira-secao {
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+    }
+}
